@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>소프 게시판</title>
+  <link rel="stylesheet"  href="css/common.css" />
+  <style>
+    div.nav { 
+      padding: 5px; border-bottom: 1px solid #ddd; margin-bottom: 25px;
+    }
+    div.panel {
+      width: 1100px; margin-bottom: 50px;
+      border: 1px solid #ddd; border-radius: 5px;
+      box-shadow: 3px 3px 3px #eee;
+    }
+    div.panel h1 {
+      margin: 0; font-size: 14pt; font-weight: bold; 
+      background:linear-gradient(90deg, #def, #bcd); padding: 10px 15px 7px 15px;
+    }
+    div.panel-body {
+      padding: 20px; 
+    }
+    select:nth-child(1) { margin-right: 100px; }
+    
+    table {     
+      width: 100%; margin: 10px 0px 20px 0px;
+      border-collapse: collapse;
+    }
+    td, th { 
+      border: 1px solid #ddd; padding: 7px; text-align: left; 
+      font-size: 11pt; font-weight: normal;
+    }
+    th { background-color: #eee; }
+  </style>
+</head>
+
+<body>
+
+<div class="main-menu">
+  <div>
+    <h1>소프 게시판</h1>
+    <a class="right" href="login.html">로그아웃</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="nav">
+    &gt; 시스템 관리 &gt; 로그기록  
+  </div>
+
+  <div class="panel">
+    <h1 class="panel-header">로그기록 목록</h1>
+    <div class="panel-body">
+    
+     <button type="button" class="btn red small right">선택항목 삭제</button>
+    
+      <div class="form">
+        <select>
+          <option value="0" selected="selected">정렬순서</option>
+          <option value="1">IP</option>
+          <option value="2">URL</option>
+          <option value="3">카테고리</option>
+        </select>
+    
+        <select>
+          <option value="0" selected="selected">조회조건</option>
+          <option value="1">IP</option>
+          <option value="2">URL</option>
+          <option value="3">카테고리</option>
+          <option value="4">내용</option>
+        </select>
+        <input type="text" />
+        <button type="submit" class="btn small">조회</button>        
+      </div>
+    
+      <table>
+        <thead>
+          <tr>
+            <th><input type="checkbox" /></th>
+            <th>ID</th><th>사용자</th><th>날짜</th><th>IP</th><th>category</th>
+          </tr>
+        </thead>
+        <tbody> 
+          <tr>
+            <td><input type="checkbox"/></td><td>10</td><td>lsj</td><td>2024-03-08 08:21:33</td><td>121.134.133.242</td><td>로그인</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"/></td><td>10</td><td>lsj</td><td>2024-03-08 08:21:33</td><td>121.134.133.242</td><td>로그인</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"/></td><td>10</td><td>lsj</td><td>2024-03-08 08:21:33</td><td>121.134.133.242</td><td>로그인</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"/></td><td>10</td><td>lsj</td><td>2024-03-08 08:21:33</td><td>121.134.133.242</td><td>로그인</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"/></td><td>10</td><td>lsj</td><td>2024-03-08 08:21:33</td><td>121.134.133.242</td><td>로그인</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"/></td><td>10</td><td>lsj</td><td>2024-03-08 08:21:33</td><td>121.134.133.242</td><td>로그인</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"/></td><td>10</td><td>lsj</td><td>2024-03-08 08:21:33</td><td>121.134.133.242</td><td>로그인</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"/></td><td>10</td><td>lsj</td><td>2024-03-08 08:21:33</td><td>121.134.133.242</td><td>로그인</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"/></td><td>10</td><td>lsj</td><td>2024-03-08 08:21:33</td><td>121.134.133.242</td><td>로그인</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"/></td><td>10</td><td>lsj</td><td>2024-03-08 08:21:33</td><td>121.134.133.242</td><td>로그인</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"/></td><td>10</td><td>lsj</td><td>2024-03-08 08:21:33</td><td>121.134.133.242</td><td>로그인</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"/></td><td>10</td><td>lsj</td><td>2024-03-08 08:21:33</td><td>121.134.133.242</td><td>로그인</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"/></td><td>10</td><td>lsj</td><td>2024-03-08 08:21:33</td><td>121.134.133.242</td><td>로그인</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"/></td><td>10</td><td>lsj</td><td>2024-03-08 08:21:33</td><td>121.134.133.242</td><td>로그인</td>
+          </tr>
+          <tr>
+            <td><input type="checkbox"/></td><td>10</td><td>lsj</td><td>2024-03-08 08:21:33</td><td>121.134.133.242</td><td>로그인</td>
+          </tr>
+        </tbody>
+      </table>
+    
+      <select class="right">
+        <option value="10">10</option>
+        <option value="15" selected="selected">15</option>
+        <option value="30">30</option>
+        <option value="100">100</option>
+      </select>
+    
+      <div class="pagination">
+        <table>
+          <tr>
+            <td class="active"><a>1</a></td>
+            <td><a>2</a></td> <td><a>3</a></td> <td><a>4</a></td>
+            <td><a>5</a></td> <td><a>6</a></td> <td><a>7</a></td>
+            <td><a>8</a></td> <td><a>9</a></td> <td><a>10</a></td>
+            <td><a>&gt;</a></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>  
+  
+  <div class="footer">
+    <div style="float: left; padding-right: 20px;">
+      <img src="images/skhu.png" style="width: 200px; "/>
+    </div>
+    <div>152-716 서울시 구로구 연동로 320 / 지하철 1, 7호선 온수(성공회대입구)역 T.02-2610-4114</div>
+    <div style="margin-top: 5px;">Copyright (c) Sung-Kong-Hoe Univisity. All rights reserved.</div>
+  </div>  
+</div>
+
+</body>
+</html>
