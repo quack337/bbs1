@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>소프 게시판</title>
   <link rel="stylesheet"  href="css/common.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
   <style>
     div.container { padding-top: 100px; }
     div.login-form {
@@ -24,6 +25,9 @@
         border: 2px solid #dee; border-radius: 8px; }
     div.login-form input:focus { border: 2px solid #aaf; outline: none; }
     div.login-form .btn { margin-top: 10px; padding: 0.7em 2em; }
+    div.login-form input { padding: 0.7em 3em; }
+    div.input { position: relative; display: inline-block; } 
+    div.input i { position: absolute; left: 0.7em; top: 0.7em; color: gray; } 
   </style>
 </head>
 
@@ -42,14 +46,21 @@
     <div class="login-body">
       <img src="images/skhu_logo.png" style="width: 200px;" />
       <form method="post" action="main.html">
-        <input type="text" name="loginName" placeholder="아이디" /> <br/>
-        <input type="password" name="password" placeholder="비밀번호" /> <br/>
+        <div class="input">
+          <i class="fa fa-user fa-lg"></i>
+          <input type="text" name="loginName" placeholder="아이디" /> 
+        </div>
+        <br/>
+        <div class="input">
+          <i class="fa fa-key fa-lg"></i>
+          <input type="password" name="password" placeholder="비밀번호" /> <br/>
+        </div>
+        <br/>
         <button type="submit" class="btn blue">로그인</button>
-        <a href="register.jsp" class="btn">회원가입</a>
+        <a href="signUp.html" class="btn">회원가입</a>
       </form>
     </div>
-  </div>  
-  
+  </div>
   <div class="footer">
     <div style="float: left; padding-right: 20px;">
       <img src="images/skhu.png" style="width: 200px; "/>
