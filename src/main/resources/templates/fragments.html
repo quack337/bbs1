@@ -10,7 +10,7 @@
     <a th:href="@{/}">메인</a>
     <span sec:authorize="!isAuthenticated()" class="right">
       <a th:href="@{/login}">로그인</a>
-      <a href="#">회원 가입</a>
+      <a th:href="@{/signUp}">회원 가입</a>
     </span>                  
     <span sec:authorize="isAuthenticated()" class="right">
       <a href="#">

@@ -2,6 +2,7 @@ package net.skhu.model;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
@@ -26,4 +27,8 @@ public class UserSignUp {
     @NotEmpty(message="이메일 주소를 입력하세요")
     @Email(message="이메일 주소가 올바르지 않습니다")
     String email;
+
+    @NotEmpty(message="사용자 유형을 선택하세요")
+    @Pattern(regexp="교수|학생")
+    String userType;
 }
