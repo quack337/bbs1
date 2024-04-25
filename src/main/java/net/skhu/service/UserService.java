@@ -15,6 +15,7 @@ import org.springframework.validation.BindingResult;
 import net.skhu.entity.User;
 import net.skhu.model.OptionTag;
 import net.skhu.model.Pagination;
+import net.skhu.model.UserEdit;
 import net.skhu.model.UserSignUp;
 import net.skhu.repository.UserRepository;
 
@@ -95,4 +96,28 @@ public class UserService {
         return page.getContent();
     }
 
+    public UserEdit findById(int id) {
+        var userEntity = userRepository.findById(id).get();
+        var userEdit = modelMapper.map(userEntity, UserEdit.class);
+        return userEdit;
+    }
+
+    public void update(UserEdit userEdit,
+            BindingResult bindingResult) throws Exception {
+        if (bindingResult.hasErrors())
+            throw new Exception("입력 데이터 오류");
+        User user2 = userRepository.findByLoginName(userEdit.getLoginName());
+        if (user2 != null && user2.getId() != userEdit.getId()) {
+            bindingResult.rejectValue("userNo", null, "사용자 아이디가 중복됩니다");
+            throw new Exception("입력 데이터 오류");
+        }
+        User user = modelMapper.map(userEdit, User.class);
+        User user0 = userRepository.findById(userEdit.getId()).get();
+        user.setPassword(user0.getPassword());
+        userRepository.save(user);
+    }
+
+    public void delete(int id) {
+        userRepository.deleteById(id);
+    }
 }

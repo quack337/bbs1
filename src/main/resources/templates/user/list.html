@@ -18,7 +18,7 @@
 
 <div class="container">
   <nav><i class="fas fa-caret-right"></i> 시스템 관리 - 사용자 목록</nav>
-  
+
   <div class="panel">
     <h1 class="panel-header">사용자 목록</h1>
     <div class="panel-body">
@@ -42,7 +42,7 @@
           <option value="50">50</option>
         </select>
       </form>
-      
+
       <table class="list">
         <thead>
           <tr>
@@ -54,8 +54,10 @@
             <th>권한</th>
           </tr>
         </thead>
-        <tbody> 
-          <tr th:each="u : ${ users }">              
+        <tbody>
+          <tr th:each="u : ${ users }"
+              th:href="${ 'edit?id=' + u.id + '&' + pagination.queryString }"
+              onclick="onClickHref(event)">
             <td th:text="${ u.id }"></td>
             <td th:text="${ u.loginName }"></td>
             <td th:text="${ u.name }"></td>
@@ -65,13 +67,13 @@
           </tr>
         </tbody>
       </table>
-        
+
       <div class="pagination" th:data-record-count="${pagination.recordCount}"
            th:data-page-size="${pagination.sz}" th:data-current-page="${pagination.pg}"></div>
     </div>
-  </div>           
-       
-  <div th:replace="~{fragments::footer}"></div>       
+  </div>
+
+  <div th:replace="~{fragments::footer}"></div>
 </div>
 </body>
 </html>
