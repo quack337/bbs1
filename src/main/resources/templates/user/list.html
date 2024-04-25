@@ -7,15 +7,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
   <script type="text/javascript" th:src="@{/js/common.js}"></script>
   <style>
-    nav { padding: 5px; border-bottom: 1px solid #ddd; margin-bottom: 25px; }
-    div.panel {
-      width: 1000px; margin: 1em;
-      border: 1px solid #ddd; border-radius: 5px;
-      box-shadow: 3px 3px 3px #ccc; }
-    div.panel h1 {
-      margin: 0; font-size: 14pt; font-weight: bold; 
-      background:linear-gradient(90deg, #def, #bcd); padding: 10px 15px 7px 15px; }
-    div.panel-body { padding: 20px; font-size: 11pt; }
+    div.panel { width: 1000px; }
     form select:nth-child(1) { margin-right: 4em; }
     form select:last-child { float: right; }
     table.list { width: 100%; margin-top: 1em; }
@@ -63,7 +55,7 @@
           </tr>
         </thead>
         <tbody> 
-          <tr th:each="u : ${ users }"> 
+          <tr th:each="u : ${ users }">              
             <td th:text="${ u.id }"></td>
             <td th:text="${ u.loginName }"></td>
             <td th:text="${ u.name }"></td>

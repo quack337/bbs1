@@ -8,19 +8,7 @@
   <link rel="stylesheet"  th:href="@{css/common.css}" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
   <style>
-    nav { padding: 5px; border-bottom: 1px solid #ddd; margin-bottom: 25px; }
-    div.panel {
-      width: 600px; margin: 50px auto;
-      border: 1px solid #ddd; border-radius: 5px;
-      background-color: #fafafa;
-      box-shadow: 3px 3px 3px #ccc;
-    }
-    div.panel h1 {
-      margin: 0; font-size: 14pt; font-weight: bold; 
-      background:linear-gradient(90deg, #def, #bcd); padding: 10px 15px 7px 15px;
-    }
-    div.panel-body { padding: 20px; }
-    
+    div.panel { width: 600px; margin: 50px auto; background-color: #fafafa; }
     input:not([type=radio]) { padding: 0.7em 1em; margin-bottom: 7px; width: 300px; 
       border: 2px solid #dee; border-radius: 8px; }
     div.panel input:focus { border: 2px solid #aaf; outline: none; }
@@ -33,7 +21,6 @@
 </head>
 
 <body>
-
 <div th:replace="~{fragments::main-menu}"></div>
 
 <div class="container">
