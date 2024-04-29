@@ -24,7 +24,7 @@
     <div class="panel-body">
 
       <form method="get" th:action="${''}" th:object="${pagination}">
-        <select th:field="*{od}">
+        <select th:field="*{od}" onchange="this.form.submit()">
           <option th:each="op : ${ orderOptions }"
                   th:value="${ op.value }" th:text="${ op.text }" />
         </select>
@@ -35,7 +35,7 @@
         <input type="text" th:field="*{st}">
         <button type="submit" class="btn cyan small">조회</button>
         <a class="btn small" href="list">초기화</a>
-        <select th:field="*{sz}">
+        <select th:field="*{sz}"  onchange="this.form.submit()">
           <option value="10">10</option>
           <option value="15">15</option>
           <option value="30">30</option>
